@@ -11,7 +11,7 @@
 schema = 1
 vllm_version_range = ">=0.32.0,<0.33.0"
 key_interface_count = 10
-target_count = 287
+target_count = 289
 
 [[key_interface]]
 symbol = "vllm.platforms.interface.PlatformEnum"
@@ -1754,6 +1754,14 @@ present = true
 fingerprint = "sha256:d365ba77bd12ae8f31a14b1785ea97f2b77725d659f541d5434d63a4f5c6ca5c"
 
 [[patch_target]]
+name = "vllm.models.kimi_k3.nvidia.kda.KimiK3DeltaAttention._recoverssm_verify"
+kind = "class"
+module = "vllm/models/kimi_k3/nvidia/kda.py"
+symbol = "KimiK3DeltaAttention._recoverssm_verify"
+present = true
+fingerprint = "sha256:b0bd3e7aa3c55ed074a4927200e6d913c29a441554fedfbe30cd52fba41634d4"
+
+[[patch_target]]
 name = "vllm.models.kimi_k3.nvidia.kda.KimiK3DeltaAttention.get_kv_cache_spec"
 kind = "class"
 module = "vllm/models/kimi_k3/nvidia/kda.py"
@@ -1784,6 +1792,14 @@ module = "vllm/models/kimi_k3/nvidia/kda.py"
 symbol = "is_fused_kda_decode_supported"
 present = true
 fingerprint = "sha256:bcac008483fce3d460657fbe040ce125db05ee92818e9e012a738e21a624ef7f"
+
+[[patch_target]]
+name = "vllm.models.kimi_k3.nvidia.kda_metadata.KimiK3KDAMetadataBuilder._get_recoverssm_context"
+kind = "class"
+module = "vllm/models/kimi_k3/nvidia/kda_metadata.py"
+symbol = "KimiK3KDAMetadataBuilder._get_recoverssm_context"
+present = true
+fingerprint = "sha256:64a4c446a6ffdd170fbc14c2d232fa2293f24a15b9e8f3f5ec2828896db4313d"
 
 [[patch_target]]
 name = "vllm.models.kimi_k3.nvidia.latent_moe_runner.LatentMoERunner.__init__"
